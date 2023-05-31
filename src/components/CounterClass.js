@@ -7,10 +7,14 @@ export class CounterClass extends React.Component {
       number: 0,
     };
   }
-  changeNumber(flag) {
-    let currentNumber = this.state.number;
-    this.setState({
-      number: flag ? currentNumber + 1 : currentNumber - 1,
+  increase() {
+    this.setState((state) => {
+      return { number: state.number + 1 };
+    });
+  }
+  dicrease() {
+    this.setState((state) => {
+      return { number: state.number - 1 };
     });
   }
   render() {
@@ -19,7 +23,7 @@ export class CounterClass extends React.Component {
         <h2>Class Component</h2>
         <button
           onClick={() => {
-            this.changeNumber(true);
+            this.increase();
           }}
         >
           plus
@@ -27,7 +31,7 @@ export class CounterClass extends React.Component {
         <p>{this.state.number}</p>
         <button
           onClick={() => {
-            this.changeNumber(false);
+            this.dicrease();
           }}
         >
           minus

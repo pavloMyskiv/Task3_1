@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 
 export const CounterFunction = () => {
   const [number, setNumber] = useState(0);
-
-  const changeNumber = (flag) => {
-    flag ? setNumber(number + 1) : setNumber(number - 1);
+  const increase = () => {
+    setNumber(number + 1);
+  };
+  const dicrease = () => {
+    setNumber(number - 1);
   };
   return (
     <div className="counter">
       <h2>Function Component</h2>
       <button
         onClick={() => {
-          changeNumber(true);
+          increase();
         }}
       >
         plus
@@ -19,7 +21,7 @@ export const CounterFunction = () => {
       <p>{number}</p>
       <button
         onClick={() => {
-          changeNumber(false);
+          dicrease();
         }}
       >
         minus
