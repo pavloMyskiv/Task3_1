@@ -1,0 +1,51 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.App {
+  background-color: #ccc;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counter {
+  margin: 10px;
+  width: 200px;
+  height: 250px;
+  padding: 10px;
+  font-family: Arial;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.counter button {
+  padding: 5px;
+  font-size: inherit;
+  width: 100%;
+  background-color: orange;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+.counter button:hover {
+  transform: scale(1.05);
+}
+.counter p {
+  padding: 15px;
+  font-size: 32px;
+}
+.counter h2{
+  font-size: 16px;
+}
