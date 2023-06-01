@@ -11,21 +11,9 @@ export const CounterFunction = () => {
   return (
     <div className="counter">
       <h2>Function Component</h2>
-      <button
-        onClick={() => {
-          increase();
-        }}
-      >
-        plus
-      </button>
+      <button onClick={increase}>plus</button>
       <p>{number}</p>
-      <button
-        onClick={() => {
-          dicrease();
-        }}
-      >
-        minus
-      </button>
+      <button onClick={dicrease}>minus</button>
     </div>
   );
 };
